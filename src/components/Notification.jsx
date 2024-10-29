@@ -1,18 +1,16 @@
+import { useNotifValue } from "../NotifContext";
+
 const Notification = () => {
   const style = {
-    border: 'solid',
+    border: "solid",
     padding: 10,
     borderWidth: 1,
-    marginBottom: 5
-  }
-  
-  if (true) return null
+    marginBottom: 5,
+  };
 
-  return (
-    <div style={style}>
-      
-    </div>
-  )
-}
 
-export default Notification
+  const notif = useNotifValue()
+  return <div style={style}>{notif}</div>;
+};
+
+export default Notification;
